@@ -1,1168 +1,652 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Document</title>
-	<link rel="stylesheet" href="app/css/vendor.css">
-	<link rel="stylesheet" href="app/fonts/stylesheet.css">
-	<link rel="stylesheet" href="app/css/style.css">
+	<title>Главная</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- MOBILE MENU -->
-
-<div class="mobile-menu">
-	<div class="close"></div>
-	<nav class="menu">
-		<ul class="menu-main">
-			<li class="menu-item">
-				<a href="#main-banner" class="scroll nav-link">Главная</a>
-			</li>
-			<li class="menu-item">
-				<a href="#price" class="scroll nav-link">Цены</a>
-			</li>
-			<li class="menu-item">
-				<a href="#repair" class="scroll nav-link">Ремонт</a>
-			</li>
-			<li class="menu-item">
-				<a href="#seo" class="scroll nav-link">О нас</a>
-			</li>
-			<li class="menu-item">
-				<a href="#reviews" class="scroll nav-link">Отзывы</a>
-			</li>
-			<li class="menu-item">
-				<a href="#advantages" class="scroll nav-link">Преимущества</a>
-			</li>
-		</ul>
-	</nav>
-</div>
-
-<!-- SECTION HEADER BEGINS -->
-
-<header class="header">
+<div class="header">
 	<div class="container">
-
-		<!-- Флекс контейнер для шапки -->
-
-		<div class="header__flex">
-
-			<!-- Логотип -->
-
-			<div class="header__info">
-				<a href="#" class="header__logo">
-					<img src="app/img/logo.svg" alt="" class="header__logo__img">
-					<p class="header__logo__text"><span>РЕМХОЛД</span> <br> Ремонт холодильников на дому в СПб и пригороде</p>
-				</a>
-				<div class="burger"></div>
-			</div>
-
-			<!-- Селект -->
-			
-			<div class="header__select form-group">
-				<label class="header__label" for="city">Ваш город:</label>
-				<select class="form-control header-select" name="city" id="citySelect">
-					<option class="header__option" value="Москва">Москва</option>
-					<option class="header__option" value="Санкт-Петербург">Санкт-Петербург</option>
-				</select>
-			</div>
-
-			<!-- Телефон + кнопка -->
-
-			<div class="header__contacts">
-				
-				<a href="tel:8(800)700-8000" class="header__phone">8 (800) 700-8000</a>
-
-				<button data-remodal-target="modal" class="btn">Оставить заявку</button>
-
-			</div>
-
-		</div>
-
-		<!-- Main-menu -->
-
-		<nav class="menu">
-			<ul class="menu-main">
-				<li class="menu-item">
-					<a href="#main-banner" class="scroll nav-link">Главная</a>
-				</li>
-				<li class="menu-item">
-					<a href="#price" class="scroll nav-link">Цены</a>
-				</li>
-				<li class="menu-item">
-					<a href="#repair" class="scroll nav-link">Ремонт</a>
-				</li>
-				<li class="menu-item">
-					<a href="#seo" class="scroll nav-link">О нас</a>
-				</li>
-				<li class="menu-item">
-					<a href="#reviews" class="scroll nav-link">Отзывы</a>
-				</li>
-				<li class="menu-item">
-					<a href="#advantages" class="scroll nav-link">Преимущества</a>
-				</li>
-			</ul>
-		</nav>
-
-	</div>
-
-</header>
-
-<!-- STICKY HEADER -->
-
-<header class="sticky">
-	<div class="container">
-
-		<!-- Флекс контейнер для шапки -->
-
-		<div class="header__flex">
-
-			<!-- Логотип -->
-
-			<div class="header__info">
-				<a href="#" class="header__logo">
-					<img src="app/img/logo.svg" alt="" class="header__logo__img">
-					<p class="header__logo__text"><span>РЕМХОЛД</span> <br> Ремонт холодильников на дому в СПб и пригороде</p>
-				</a>
-			</div>
-
-			<!-- Main-menu -->
-
-			<nav class="menu">
-				<ul class="menu-main">
-					<li class="menu-item">
-						<a href="#main-banner" class="scroll nav-link">Главная</a>
-					</li>
-					<li class="menu-item">
-						<a href="#price" class="scroll nav-link">Цены</a>
-					</li>
-					<li class="menu-item">
-						<a href="#repair" class="scroll nav-link">Ремонт</a>
-					</li>
-					<li class="menu-item">
-						<a href="#seo" class="scroll nav-link">О нас</a>
-					</li>
-					<li class="menu-item">
-						<a href="#reviews" class="scroll nav-link">Отзывы</a>
-					</li>
-					<li class="menu-item">
-						<a href="#advantages" class="scroll nav-link">Преимущества</a>
-					</li>
-				</ul>
-			</nav>
-
-			<!-- Телефон + кнопка -->
-
-			<div class="header__contacts">
-				
-				<a href="tel:8(800)700-8000" class="header__phone">8 (800) 700-8000</a>
-
-				<button data-remodal-target="modal" class="btn">Оставить заявку</button>
-
-			</div>
-
-			<div class="burger"></div>
-
-		</div>
-
-	</div>
-
-</header>
-
-<!-- SECTION MAIN BANNER -->
-
-<section class="main-banner" id="main-banner">
-	<div class="container">
-		<h1 class="main-banner__title">БЫСТРЫЙ РЕМОНТ ХОЛОДИЛЬНИКОВ НА ДОМУ</h1>
-
-		<p class="main-banner__sub">Экономия от 500 до 1000 руб.</p>
-
-		<div class="main-banner__form">
-			<p class="main-banner__subtitle">Выезд мастера на дом <span>бесплатно</span></p>
-			<form id="form__main__banner" action="">
-				<div class="form__flex">
-					<input required type="text" class="input" placeholder="Ваше имя">
-					<input required id="phone-main-banner" type="text" class="input" placeholder="Номер телефона">
-					<input required type="text" class="input" placeholder="Опишите поломку">
-					<button class="main-banner__btn input">Отправить заявку</button>
-					<p class="policy">Нажимая кнопку "Отправить заявку", вы даете согласие на <a class="policy__link" href="#">обработку ваших персональных данных</a></p>
-				</div>
-			</form>
-
-		</div>
-	</div>
-</section>
-
-<!-- SECTION CITY -->
-
-<section class="city">
-	<div class="container">
-		<div class="city-top">
-			<div class="city-form">
-				<h2 class="city-title">Мы делаем диагностику <span>бесплатно</span></h2>
-				<p class="city-text">Оставьте свои контактные данные чтобы получить бесплатную консультацию нашего менеджера и проектировщика</p>
-				<form action="POST">
-					<div class="city-inputs">
-						<input required type="text" class="input city-input" placeholder="Ваше имя">
-						<input required id="phone-diag" type="text" class="input city-input" placeholder="Номер телефона">
-					</div>
-					<button class="input btn city-btn">Отправить</button>
-					<p class="policy">Нажимая кнопку "Отправить", вы даете согласие на <a class="policy__link" href="#">обработку ваших персональных данных</a></p>
-				</form>
-				<p class="city-call">Или позвоните нам</p>
-				<a href="tel:8(800)700-8000" class="city-phone">8(800)700-8000</a>
-			</div>
-			<div class="city-map" id="yaMap">
-				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4adcf4b90085619eba132827963f1bb9046b1fe5bb8bef206e80f3ed38ad8d01&amp;width=100%25&amp;height=440&amp;lang=ru_RU&amp;scroll=false"></script>
-			</div>
-			<div class="city-map" id="yaMapMobile">
-				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4adcf4b90085619eba132827963f1bb9046b1fe5bb8bef206e80f3ed38ad8d01&amp;width=100%25&amp;height=250&amp;lang=ru_RU&amp;scroll=false"></script>
-			</div>
-		</div>
-		<div class="city-bottom">
-			<div class="city-district">
-				<ul class="city-district__single">
-					<li class="city-item-title">Районы города</li>
-					<li class="city-district__item">Адмиралтейский</li>
-					<li class="city-district__item">Василеостровский</li>
-					<li class="city-district__item">Выборгский</li>
-					<li class="city-district__item">Калининский</li>
-					<li class="city-district__item">Кировский</li>
-					<li class="city-district__item">Красногвардейский</li>
-					<li class="city-district__item">Красносельский</li>
-					<li class="city-district__item">Курортный</li>
-					<li class="city-district__item">Московский</li>
-					<li class="city-district__item">Невский</li>
-					<li class="city-district__item">Петроградский</li>
-					<li class="city-district__item">Приморский</li>
-					<li class="city-district__item">Фрунзенский</li>
-					<li class="city-district__item">Центральный</li>
-				</ul>
-				<ul class="city-district__single">
-					<li class="city-item-title">Пригороды</li>
-					<li class="city-district__item">Всеволожск</li>
-					<li class="city-district__item">Гатчина</li>
-					<li class="city-district__item">Колпино</li>
-					<li class="city-district__item">Красное Село</li>
-					<li class="city-district__item">Кронштадт</li>
-					<li class="city-district__item">Павловск</li>
-					<li class="city-district__item">Петродворец</li>
-					<li class="city-district__item">Пушкин</li>
-					<li class="city-district__item">Стрельна</li>
-					<li class="city-district__item">Янино</li>
-				</ul>
-			</div>
-			<div class="city-subway">
-				<p class="city-subway__title">Обслуживаем все станции метро</p>
-				<ul class="city-subway__single">
-					<div class="city-subway__wrapper">
-						<li class="city-subway__item">Автово</li>
-						<li class="city-subway__item">Адмиралтейская</li>
-						<li class="city-subway__item">Академическая</li>
-						<li class="city-subway__item">Балтийская</li>
-						<li class="city-subway__item">Бухарестская</li>
-						<li class="city-subway__item">Василеостровская</li>
-						<li class="city-subway__item">Владимирская</li>
-						<li class="city-subway__item">Волковская</li>
-						<li class="city-subway__item">Выборгская</li>
-						<li class="city-subway__item">Горьковская</li>
-						<li class="city-subway__item">Гостиный двор</li>
-						<li class="city-subway__item">Гражданский пр.</li>
-					</div>
-					<div class="city-subway__wrapper">
-						<li class="city-subway__item">Комендантский пр.</li>
-						<li class="city-subway__item">Крестовский остров</li>
-						<li class="city-subway__item">Купчино</li>
-						<li class="city-subway__item">Ладожская</li>
-						<li class="city-subway__item">Ленинский проспект</li>
-						<li class="city-subway__item">Ломоносовская</li>
-						<li class="city-subway__item">Маяковская</li>
-						<li class="city-subway__item">Международная</li>
-						<li class="city-subway__item">Московская</li>
-						<li class="city-subway__item">Московские ворота</li>
-						<li class="city-subway__item">Нарвская</li>
-						<li class="city-subway__item">Парнас</li>
-					</div>
-					<div class="city-subway__wrapper">
-						<li class="city-subway__item">Петроградская</li>
-						<li class="city-subway__item">Пионерская</li>
-						<li class="city-subway__item">Пл. Александра Невского</li>
-						<li class="city-subway__item">Площадь Ленина</li>
-						<li class="city-subway__item">Площадь Мужества</li>
-						<li class="city-subway__item">Политехническая</li>
-						<li class="city-subway__item">Приморская</li>
-						<li class="city-subway__item">Пролетарская</li>
-						<li class="city-subway__item">Проспект Большевиков</li>
-						<li class="city-subway__item">Проспект Ветеранов</li>
-						<li class="not-show city-subway__item">Проспект Ветеранов</li>
-						<li class="not-show city-subway__item">Проспект Ветеранов</li>
-						<li class="not-show city-subway__item">Проспект Ветеранов</li>
-					</div>
-				</ul>
-				<button class="city-subway-btn btn">Открыть весь список станций</button>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- SECTION FEEDBACK -->
-
-<section class="feedback">
-	<div class="container feedback__container">
-
-		<div class="feedback__flex">
-			<div class="feedback__form main-banner__form">
-				<p class="main-banner__subtitle">Выезд мастера на дом <span>бесплатно</span></p>
-				<form action="POST">
-					<div class="form__flex">
-						<input required type="text" class="input" placeholder="Ваше имя">
-						<input required id="phone-master" type="text" class="input" placeholder="Номер телефона">
-						<input required type="text" class="input" placeholder="Опишите поломку">
-						<button class="feedback__btn main-banner__btn input">Отправить заявку</button>
-						<p class="policy">Нажимая кнопку "Отправить заявку", вы даете согласие на <a class="policy__link" href="#">обработку ваших персональных данных</a></p>
-					</div>
-				</form>
-			
-			</div>
-			
-			<div class="feedback-right">
-				<p class="main-banner__title feedback-right__title">Звоните!</p>
-				<p class="feedback-right__subtitle">Все сделаем быстро и недорого!</p>
-				
-			</div>
-		</div>
-
-		<div class="feedback-right__images">
-			<img src="app/img/ref_1.png" alt="">
-			<img src="app/img/ref_2.png" alt="">
-			<img src="app/img/ref_3.png" alt="">
-		</div>
-
-	</div>
-</section>
-
-<!-- SECTION PRICE -->
-
-<section class="price" id="price">
-	<div class="container">
-		<h3 class="title price__title">Поломки которые мы исправим за 1 час</h3>
-
-		<ul class="price__list">
-        
-            <li class="price__item">
-                
-                <!-- <div class="price__tooltip">
-                    <div class="price__tooltip-title">
-                        Title
-                    </div>
-                    <div class="price__tooltip-text">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    </div>
-                    <div class="price__tooltip-triangle"></div>
-                </div> -->
-                
-                <div class="price__item-title">Вызов мастера по СПб и Пригороду</div>
-
-                <div class="price__item-price">бесплатно</div>
-                <div class="price__item-action">
-                    <button data-remodal-target="modal" class="price__item-link button button_icon button_icon_next">Заказать</button>
-                </div>
-            </li>
-        
-            <li class="price__item">
-                
-                <div class="price__item-title">Диагностика (в случае ремонта)</div>
-
-                <div class="price__item-price">бесплатно</div>
-
-                <div class="price__item-action">
-                    <button data-remodal-target="modal" class="price__item-link button button_icon button_icon_next">Заказать</button>
-                </div>
-
-            </li>
-        
-            <li class="price__item">
-                
-                <div class="price__item-title">Утечка хладогена, микротрещены в системе</div>
-
-                <div class="price__item-price">от 630 руб.</div>
-
-                <div class="price__item-action">
-                    <button data-remodal-target="modal" class="price__item-link button button_icon button_icon_next">Заказать</button>
-                </div>
-
-            </li>
-        
-            <li class="price__item">
-                
-                <div class="price__item-title">Выход из строя мотора-компрессора</div>
-
-                <div class="price__item-price">от 1450 руб.</div>
-
-                <div class="price__item-action">
-                    <button data-remodal-target="modal" class="price__item-link button button_icon button_icon_next">Заказать</button>
-                </div>
-
-            </li>
-        
-            <li class="price__item">
-                
-                <div class="price__item-title">Засор фитьтра осушителя системы.</div>
-
-                <div class="price__item-price">от 350 руб.</div>
-
-                <div class="price__item-action">
-                    <button data-remodal-target="modal" class="price__item-link button button_icon button_icon_next">Заказать</button>
-                </div>
-
-            </li>
-        
-            <li class="price__item">
-                
-                <div class="price__item-title">Засор фитьтра осушителя системы.</div>
-
-                <div class="price__item-price">от 350 руб.</div>
-
-                <div class="price__item-action">
-                    <button data-remodal-target="modal" class="price__item-link button button_icon button_icon_next">Заказать</button>
-                </div>
-
-            </li>
-        
-            <li class="price__item">
-                
-                <div class="price__item-title">Засор капиллярной трубки системы.</div>
-
-                <div class="price__item-price">от 850 руб.</div>
-
-                <div class="price__item-action">
-                    <button data-remodal-target="modal" class="price__item-link button button_icon button_icon_next">Заказать</button>
-                </div>
-
-            </li>
-        
-            <li class="price__item not-show">
-                
-                <div class="price__item-title">Засор капиллярной трубки системы.</div>
-
-                <div class="price__item-price">от 850 руб.</div>
-
-                <div class="price__item-action">
-                    <button data-remodal-target="modal" class="price__item-link button button_icon button_icon_next">Заказать</button>
-                </div>
-
-            </li>
-        
-            <li class="price__item not-show">
-                
-                <div class="price__item-title">Засор капиллярной трубки системы.</div>
-
-                <div class="price__item-price">от 850 руб.</div>
-
-                <div class="price__item-action">
-                    <button data-remodal-target="modal" class="price__item-link button button_icon button_icon_next">Заказать</button>
-                </div>
-
-            </li>
-        
-            <li class="price__item not-show">
-                
-                <div class="price__item-title">Засор капиллярной трубки системы.</div>
-
-                <div class="price__item-price">от 850 руб.</div>
-
-                <div class="price__item-action">
-                    <button data-remodal-target="modal" class="price__item-link button button_icon button_icon_next">Заказать</button>
-                </div>
-
-            </li>
-            
-            <li class="price__item price__item_payments" id="more-price">
-                <div class="price__more">
-                   Увидеть все возможные поломки
-                </div>
-                <div class="price__payment-title">
-                    Возможность безналичной оплаты
-                </div>
-                <div class="price__payment-image">
-                    <img src="app/img/payment.png"
-                        class="price__payment-img">
-                </div>
-            </li>
-
-        </ul>
-
-	</div>
-</section>
-
-<!-- SECTION WORK -->
-
-<section class="work">
-	<div class="container">
-		<h3 class="title work__title">Как мы работаем?</h3>
-		<div class="row">
-
-			<div class="col-lg-3 col-md-6">
-				<div class="work__block">
-					<img src="app/img/icons/call.svg" alt="" class="work__img">
-					<h4 class="work__subtitle">Вы звоните или оставляете заявку</h4>
-					<p class="work__text">Диспетчер связывается с Вами и отвечает на ваши вопросы - это бесплатно </p>
-				</div>
-			</div>
-
-			<div class="col-lg-3 col-md-6">
-				<div class="work__block">
-					<img src="app/img/icons/car.svg" alt="" class="work__img">
-					<h4 class="work__subtitle">Выезд к нам</h4>
-					<p class="work__text">Вы договариваетесь про удобное время, когда мастер может к Вам приехать и заняться ремонтом Вашего холодильника.</p>
-				</div>
-			</div>
-
-			<div class="col-lg-3 col-md-6">
-				<div class="work__block">
-					<img src="app/img/icons/kitchen-3.svg" alt="" class="work__img">
-					<h4 class="work__subtitle">Определяемся с вероятной поломкой</h4>
-					<p class="work__text">Осмотрев технику, мастер определяет поломку, озвучивает стоимость работы.</p>
-				</div>
-			</div>
-
-			<div class="col-lg-3 col-md-6">
-				<div class="work__block">
-					<img src="app/img/icons/warranty.svg" alt="" class="work__img">
-					<h4 class="work__subtitle">Все работает</h4>
-					<p class="work__text">Вместе с матером проверяете работу холодильника, если Вас все устраивает - оплачиваете работу мастеру.</p>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</section>
-
-<!-- SECTION MASTERS -->
-
-<section class="masters">
-	<div class="container masters-container">
-		<h3 class="title masters__title">Наши мастера</h3>
-
-		<div class="swiper-container swiper-masters">
-			
-			<div class="swiper-wrapper">
-
-				<div class="swiper-slide masters-slide">
-					<img src="app/img/swiper-1.png" alt="" class="masters__img">
-					<div class="masters__info">
-						<p class="masters__name">Владислав Лютый</p>
-						<p class="masters__age">Стаж 8 лет</p>
-					</div>
-				</div>
-				
-				<div class="swiper-slide masters-slide">
-					<img src="app/img/swiper-2.png" alt="" class="masters__img">
-					<div class="masters__info">
-						<p class="masters__name">Владислав Лютый</p>
-						<p class="masters__age">Стаж 8 лет</p>
-					</div>
-				</div>
-				
-				<div class="swiper-slide masters-slide">
-					<img src="app/img/swiper-3.png" alt="" class="masters__img">
-					<div class="masters__info">
-						<p class="masters__name">Владислав Лютый</p>
-						<p class="masters__age">Стаж 8 лет</p>
-					</div>
-				</div>
-				
-				<div class="swiper-slide masters-slide">
-					<img src="app/img/swiper-3.png" alt="" class="masters__img">
-					<div class="masters__info">
-						<p class="masters__name">Владислав Лютый</p>
-						<p class="masters__age">Стаж 8 лет</p>
-					</div>
-				</div>
-				
-				<div class="swiper-slide masters-slide">
-					<img src="app/img/swiper-3.png" alt="" class="masters__img">
-					<div class="masters__info">
-						<p class="masters__name">Владислав Лютый</p>
-						<p class="masters__age">Стаж 8 лет</p>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-
-		<div class="swiper-button-prev swiper-button-prev-masters"></div>
-		<div class="swiper-button-next swiper-button-next-masters"></div>
-
-	</div>
-</section>
-
-<!-- SECTION REPAIR -->
-
-<section class="repair" id="repair">
-	<div class="container">
-		<h3 class="title repair__title">Холодильники, которые мы ремонтируем</h3>
-		<div class="repair-flex">
-
-			<div data-remodal-target="modal" class="repair-item">
-				<img src="app/img/aeg.png" alt="" class="repair-img">
-			</div>
-
-			<div data-remodal-target="modal" class="repair-item">
-				<img src="app/img/ariston.png" alt="" class="repair-img">
-			</div>
-
-			<div data-remodal-target="modal" class="repair-item">
-				<img src="app/img/kaiser.png" alt="" class="repair-img">
-			</div>
-
-			<div data-remodal-target="modal" class="repair-item">
-				<img src="app/img/beko.png" alt="" class="repair-img">
-			</div>
-
-			<div data-remodal-target="modal" class="repair-item">
-				<img src="app/img/bosch.png" alt="" class="repair-img">
-			</div>
-
-			<div data-remodal-target="modal" class="repair-item">
-				<img src="app/img/whirlpool.png" alt="" class="repair-img">
-			</div>
-
-			<div data-remodal-target="modal" class="repair-item">
-				<img src="app/img/gorenje.png" alt="" class="repair-img">
-			</div>
-
-			<div data-remodal-target="modal" class="repair-item">
-				<img src="app/img/ardo.png" alt="" class="repair-img">
-			</div>
-
-			<div data-remodal-target="modal" class="repair-item">
-				<img src="app/img/siemens.png" alt="" class="repair-img">
-			</div>
-
-			<div data-remodal-target="modal" class="repair-item">
-				<img src="app/img/lg.png" alt="" class="repair-img">
-			</div>
-
-			<div data-remodal-target="modal" class="repair-item">
-				<img src="app/img/indesit.png" alt="" class="repair-img">
-			</div>
-
-			<div data-remodal-target="modal" class="repair-item">
-				<img src="app/img/samsung.png" alt="" class="repair-img">
-			</div>
-
-			<div data-remodal-target="modal" class="repair-item">
-				<img src="app/img/zanussi.png" alt="" class="repair-img">
-			</div>
-
-			<div data-remodal-target="modal" class="repair-item">
-				<img src="app/img/electrolux.png" alt="" class="repair-img">
-			</div>
-
-			<div data-remodal-target="modal" class="repair-item">
-				<p class="repair-text">И еще 105 брендов</p>
-			</div>
-
-		</div>
-	</div>
-</section>
-
-<!-- SECTION FEEDBACK -->
-
-<section class="feedback">
-	<div class="container feedback__container">
-
-		<div class="feedback__flex">
-			<div class="feedback__form main-banner__form">
-				<p class="main-banner__subtitle">Выезд мастера на дом <span>бесплатно</span></p>
-				<form action="POST">
-					<div class="form__flex">
-						<input required type="text" class="input" placeholder="Ваше имя">
-						<input required id="phone-master-2" type="text" class="input" placeholder="Номер телефона">
-						<input required type="text" class="input" placeholder="Опишите поломку">
-						<button class="feedback__btn main-banner__btn input">Отправить заявку</button>
-						<p class="policy">Нажимая кнопку "Отправить заявку", вы даете согласие на <a class="policy__link" href="#">обработку ваших персональных данных</a></p>
-					</div>
-				</form>
-			
-			</div>
-			
-			<div class="feedback-right">
-				<p class="main-banner__title feedback-right__title">Звоните!</p>
-				<p class="feedback-right__subtitle">Все сделаем быстро и недорого!</p>
-				
-			</div>
-		</div>
-
-		<div class="feedback-right__images">
-			<img src="app/img/ref_1.png" alt="">
-			<img src="app/img/ref_2.png" alt="">
-			<img src="app/img/ref_3.png" alt="">
-		</div>
-
-	</div>
-</section>
-
-<!-- SECTION REVIEWS -->
-
-<section class="reviews" id="reviews">
-	<div class="container reviews__container">
-		<h3 class="title reviews__title">Что говорят наши клиенты</h3>
-
-		<div class="swiper-container swiper-reviews">
-			
-			<div class="swiper-wrapper">
-				
-				<div class="swiper-slide reviews-slide">
-					<div class="reviews__top">
-						<img src="app/img/reviews-avatar.png" alt="" class="reviews__img">
-						<div class="reviews__info">
-							<p class="reviews__name">Игорь Древесина</p>
-							<p class="reviews__date">21.08.2019</p>
+		<div class="row align-items-center">
+			<div class="col-lg-6 col-md-6 col-9">
+				<div class="flex align-items-center">
+					<a href="index.html" class="header-logo flex">
+						<img src="img/logo.png" alt="">
+						<div class="header-logo__text">
+							<p><span>Rbt</span> skill</p>
+							<p>Школа по ремонту техники</p>
 						</div>
-					</div>
-					<div class="reviews__text">Мастер приехал вовремя, трезвый, аккуратный, вежливый. Примерно за час исправил проблему с тем, что холодильник перестал держать температуру. Спасибо!</div>
-				</div>
-				
-				<div class="swiper-slide reviews-slide">
-					<div class="reviews__top">
-						<img src="app/img/reviews-avatar.png" alt="" class="reviews__img">
-						<div class="reviews__info">
-							<p class="reviews__name">Игорь Древесина</p>
-							<p class="reviews__date">21.08.2019</p>
-						</div>
-					</div>
-					<div class="reviews__text">Остался доволен ремонтом. По ценам вполне нормально. Главное что решили проблему быстро.</div>
-				</div>
-				
-				<div class="swiper-slide reviews-slide">
-					<div class="reviews__top">
-						<img src="app/img/reviews-avatar.png" alt="" class="reviews__img">
-						<div class="reviews__info">
-							<p class="reviews__name">Игорь Древесина</p>
-							<p class="reviews__date">21.08.2019</p>
-						</div>
-					</div>
-					<div class="reviews__text">Остался доволен ремонтом. По ценам вполне нормально. Главное что решили проблему быстро.</div>
-				</div>
-
-			</div>
-
-		</div>
-
-		<div class="swiper-button-prev swiper-button-prev-reviews"></div>
-		<div class="swiper-button-next swiper-button-next-reviews"></div>
-
-		<div class="reviews__flex__btn">
-			<button data-remodal-target="modal" class="reviews__btn">Все отзывы</button>
-			<button data-remodal-target="modal-review" class="reviews__btn">Оставить свой отзыв</button>
-		</div>
-
-	</div>
-</section>
-
-<!-- SECTION ADVANTAGES -->
-
-<section class="advantages" id="advantages">
-	<div class="container">
-		<h3 class="title advantages__title">Преимущества работы с нами</h3>
-		<div class="row">
-
-			<div class="col-lg-6">
-				<div class="advantages__block advantages__block__master">
-					<p class="advantages__subtitle advantages__subtitle__master">Выезд мастера</p>
-					<p class="advantages__text">Быстрое устранение любых неисправностей с холодильниками на дому у клиента – то, чего нам удалось достичь благодаря оперативному выезду мастера на дом, наличию необходимых инструментов и комплектующих материалов.</p>
-				</div>
-			</div>
-
-			<div class="col-lg-6">
-				<div class="advantages__block advantages__block__diagnostics">
-					<p class="advantages__subtitle advantages__subtitle__diagnostics">Бесплатная диагностика</p>
-					<p class="advantages__text">Ремонт холодильников недорого в СПб – миссия компании. Мы устанавливаем адекватные расценки за счет того, что приобретаем расходные материалы у производителей техники, при этом не сотрудничаем с посредниками.</p>
-				</div>
-			</div>
-
-			<div class="col-lg-6">
-				<div class="advantages__block advantages__block__qual">
-					<p class="advantages__subtitle advantages__subtitle__qual">Квалифицированые мастера</p>
-					<p class="advantages__text">На все виды работ вы обязательно получите гарантийный талон, если обратились в сервисный центр СПб. МАСТЕР "ИНЕЙ" ПЛЮС – легальная компания, поэтому мы не занимаемся халтурой, не оставляем клиентов в беде с неисправностями техники.</p>
-				</div>
-			</div>
-
-			<div class="col-lg-6">
-				<div class="advantages__block advantages__block__repair">
-					<p class="advantages__subtitle advantages__subtitle__repair">Срочный ремонт на дому</p>
-					<p class="advantages__text">Вы вызываете специалиста – он приезжает для проведения ремонта холодильника в сжатые сроки. Это в значительной степени облегчает жизнь клиентам, экономит их средства, так как теперь нет нужды искать автомобиль с целью транспортировки в сервисный центр.</p>
-				</div>
-			</div>
-
-			<div class="col-lg-6">
-				<div class="advantages__block advantages__block__guarantee">
-					<p class="advantages__subtitle advantages__subtitle__guarantee">Гарантия</p>
-					<p class="advantages__text">На все виды работ вы обязательно получите гарантийный талон, если обратились в сервисный центр СПб. МАСТЕР "ИНЕЙ" ПЛЮС – легальная компания, поэтому мы не занимаемся халтурой, не оставляем клиентов в беде с неисправностями техники.</p>
-				</div>
-			</div>
-
-			<div class="col-lg-6">
-				<div class="advantages__block advantages__block__service">
-					<p class="advantages__subtitle advantages__subtitle__service">Качественное обслуживание</p>
-					<p class="advantages__text">Вы вызываете специалиста – он приезжает для проведения ремонта холодильника в сжатые сроки. Это в значительной степени облегчает жизнь клиентам, экономит их средства, так как теперь нет нужды искать автомобиль с целью транспортировки в сервисный центр.</p>
-				</div>
-			</div>
-
-			<div class="col-lg-12">
-				<div class="advantages__block advantages__block__facts">
-					<p class="advantages__subtitle advantages__subtitle__facts">Некоторые факты о нас</p>
-					<p class="advantages__text advantages__text__facts">Достижения компании не остались незамеченными для постоянных клиентов.Поэтому мы стремимся познакомить жителей СПб с фактами о нашем сервисном центре. Обратите внимание на следующие цифры</p>
-					<div class="advantages__facts">
-						<div class="advantages__fact">
-							<p class="advantages__fact__title">12</p>
-							<p class="advantages__fact__text">Лет на рынке</p>
-						</div>
-						<div class="advantages__fact">
-							<p class="advantages__fact__title">1370+</p>
-							<p class="advantages__fact__text">Отремонтированных <br> холодильников</p>
-						</div>
-						<div class="advantages__fact">
-							<p class="advantages__fact__title">96%</p>
-							<p class="advantages__fact__text">Довольных клиентов</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</section>
-
-<!-- SECTION INFO -->
-
-<section class="info">
-	<div class="container">
-		<h3 class="title info__title">Звоните <br> <span>Без выходных и праздников | с 8 до 21</span></h3>
-		<div class="row">
-
-			<div class="col-lg-6">
-				<div class="info__left">
-					<div class="info__left__top">
-						<p class="info__left__text">
-							Если вы хотите оформить заявку на ремонт кофемашины, <br> звоните нам в любое время.
-						</p>
-						<a href="tel:8(812)602-60-00" class="info__left__link">8 (812) 602-60-00</a>
-					</div>
-					<div class="info__left__bottom">
-						<p class="info__left__question">Хотите, чтобы мы вам перезвонили? <br> Заполните контактные данные, мы свяжемся с вами за минуту</p>
-						<form action="POST">
-							<div class="info__left__flex">
-								<input required id="phone-call" type="text" class="input info__input" placeholder="Ваш номер">
-								<button class="input info__input info__input__btn">Заказать звонок</button>
-							</div>
-							<p class="policy policy__info">Нажимая кнопку "Заказать звонок", вы даете согласие на <a class="policy__link" href="#">обработку ваших персональных данных</a></p>
-						</form>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-6">
-
-				<!-- <div class="info__right" id="que__acc">
-					<div class="question">
-						<div class="question__burger"></div>
-						<h3 class="question__ask">Какие сроки выполнения ремонта?</h3>
-						<p class="question__answer">Наш сервисный центр принимает как наличный, так и безналичный расчет. Для компаний самостоятельно составим все необходимые документы.</p>
-					</div>
-					<div class="question">
-						<div class="question__burger"></div>
-						<h3 class="question__ask">Как можно оплатить ваши услуги?</h3>
-						<p class="question__answer">Наш сервисный центр принимает как наличный, так и безналичный расчет. Для компаний самостоятельно составим все необходимые документы.</p>
-					</div>
-					<div class="question">
-						<div class="question__burger"></div>
-						<p class="question__ask">Какие сроки выполнения ремонта?</p>
-						<p class="question__answer">Наш сервисный центр принимает как наличный, так и безналичный расчет. Для компаний самостоятельно составим все необходимые документы.</p>
-					</div>
-				</div> -->
-
-				<!-- блок аккордеон -->
-
-				<div class="accordion">
-				    <section class="accordion_item">
-				        <h3 class="title_block">Какие сроки выполнения ремонта?</h3>
-				        <div class="info">
-				            <p class="question__answer">Наш сервисный центр принимает как наличный, так и безналичный расчет. Для компаний самостоятельно составим все необходимые документы.</p>
-				        </div>
-				    </section>
-				    <section class="accordion_item">
-				        <h3 class="title_block">Как можно оплатить ваши услуги?</h3>
-				        <div class="info">
-				            <p class="question__answer">Наш сервисный центр принимает как наличный, так и безналичный расчет. Для компаний самостоятельно составим все необходимые документы.</p>
-				        </div>
-				    </section>
-				    <section class="accordion_item">
-				        <h3 class="title_block">Какие сроки выполнения ремонта?</h3>
-				        <div class="info">
-				            <p class="question__answer">Наш сервисный центр принимает как наличный, так и безналичный расчет. Для компаний самостоятельно составим все необходимые документы.</p>
-				        </div>
-				    </section>
-				</div>
-
-				<!-- конец блока аккордеон -->
-
-			</div>
-
-		</div>
-	</div>
-</section>
-
-<!-- SECTION SEO -->
-
-<section class="seo" id="seo">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6">
-				<img src="app/img/seo-img.png" alt="" class="seo__img">
-			</div>
-			<div class="col-lg-6">
-				<p class="seo__title">Ремонт холодильников в СПБ</p>
-				<p class="seo__text">Холодильник перестал исправно работать? Перегреваются стенки прибора, заметили возникновение подтеков, не происходит автоматического отключения?</p>
-				<p class="seo__text">Вы хотели бы:Осуществить ремонт холодильников в Санкт Петербурге доступно на дому, заплатив определенную сумму? Пригласить опытного мастера, отлично разбирающегося во внутреннем устройстве холодильной техники, умеющего быстро находить и устранять неисправности? Выполнить диагностику проблем с использованием современного оборудования? Отвезти прибор в сервисный центр, оформив заявку?</p>
-				<p class="seo__text">У вас есть сомнения, что: У мастера не будет нужных инструментов, позволяющих найти и устранить неисправность? После завершения всех работ холодильник не будет нормально функционировать? Стоимость ремонта превысит возможности вашего имеющегося бюджета? Мы ремонтируем любые модели холодильников: Indesit (Индезит), Liebherr (Либхер), Atlant (Антлант), Samsung (Самсунг), Electrolux (Электролюкс), Bosch (Бош), LG (Элджи), VestFrost (ВестФрост), Ariston (Аристон), Whirlpool (Вирпул) и многих других</p>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- SECTION STEPS -->
-
-<section class="steps">
-	<div class="container">
-		<h3 class="title steps__title info__title">Этапы работы с нами <br> <span>Выполним ремонт максимально быстро и с гарантией.</span></h3>
-
-		<div class="steps__flex">
-
-			<div class="steps__card">
-				<img src="app/img/icons/phone.svg" alt="" class="steps__img">
-				<p class="steps__card__title">Звоните нам</p>
-				<p class="steps__card__text">Или оставляете заявку</p>
-			</div>
-
-			<div class="steps__card">
-				<img src="app/img/icons/like.svg" alt="" class="steps__img">
-				<p class="steps__card__title">Согласовываем</p>
-				<p class="steps__card__text">все детали заказа</p>
-			</div>
-
-			<div class="steps__card">
-				<img src="app/img/icons/search.svg" alt="" class="steps__img">
-				<p class="steps__card__title">Диагностируем</p>
-				<p class="steps__card__text">поломку вашей техники</p>
-			</div>
-
-			<div class="steps__card">
-				<img src="app/img/icons/wrench.svg" alt="" class="steps__img">
-				<p class="steps__card__title">Ремонтируем</p>
-				<p class="steps__card__text">сломанную технику</p>
-			</div>
-
-			<div class="steps__card">
-				<img src="app/img/icons/wallet-1.svg" alt="" class="steps__img">
-				<p class="steps__card__title">Оплачиваете</p>
-				<p class="steps__card__text">проведенные работы</p>
-			</div>
-
-			<div class="steps__card">
-				<img src="app/img/icons/ribbon.svg" alt="" class="steps__img">
-				<p class="steps__card__title">Даём гарантию</p>
-				<p class="steps__card__text">на все работы</p>
-			</div>
-
-		</div>
-
-	</div>
-</section>
-
-<!-- SECTION FEEDBACK -->
-
-<section class="feedback">
-	<div class="container feedback__container">
-
-		<div class="feedback__flex">
-			<div class="feedback__form main-banner__form">
-				<p class="main-banner__subtitle">Выезд мастера на дом <span>бесплатно</span></p>
-				<form action="POST">
-					<div class="form__flex">
-						<input required type="text" class="input" placeholder="Ваше имя">
-						<input required id="phone-master-3" type="text" class="input" placeholder="Ваш телефон">
-						<input required type="text" class="input" placeholder="Опишите поломку">
-						<button class="feedback__btn main-banner__btn input">Отправить заявку</button>
-						<p class="policy">Нажимая кнопку "Отправить заявку", вы даете согласие на <a class="policy__link" href="#">обработку ваших персональных данных</a></p>
-					</div>
-				</form>
-			
-			</div>
-			
-			<div class="feedback-right">
-				<p class="main-banner__title feedback-right__title">Звоните!</p>
-				<p class="feedback-right__subtitle">Все сделаем быстро и недорого!</p>
-				
-			</div>
-		</div>
-
-		<div class="feedback-right__images">
-			<img src="app/img/ref_1.png" alt="">
-			<img src="app/img/ref_2.png" alt="">
-			<img src="app/img/ref_3.png" alt="">
-		</div>
-
-	</div>
-</section>
-
-<!-- SECTION FOOTER -->
-
-<footer class="footer" id="footer">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6">
-				<div class="footer__container">
-					<p class="footer__title">Наши контакты</p>
-					<p class="footer__sub">свяжитесь с нами любым удобным для Вас способом</p>
-					<a href="88126032681" class="footer__phone">8 (812) 603-2681</a>
-				</div>
-				<form action="POST">
-					<div class="footer__form">
-						<p class="footer__ask">Задайте нам вопрос</p>
-						<div class="footer__form__flex">
-							<input required type="text" class="input footer__input" placeholder="Ваше имя">
-							<input required id="phone-1" type="text" class="input footer__input" placeholder="Ваш телефон">
-							<textarea class="input footer__input footer__input__textarea" name="" id="" cols="30" rows="10" placeholder="Ваш комментарий"></textarea>
-						</div>
-						<div class="footer__flex">
-							<button class="btn footer__btn input__btn">Отправить</button>
-							<p class="footer__policy policy">Нажимая кнопку "Отправить", Вы соглашаетесь <br> на <a class="policy__link" href="#">обработку ваших персональных данных</a></p>
-						</div>
-					</div>
-				</form>
-			</div>
-			<div class="col-lg-6 col-map">
-				<div class="footer__map" id="footerMap1">
-					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4adcf4b90085619eba132827963f1bb9046b1fe5bb8bef206e80f3ed38ad8d01&amp;width=100%25&amp;height=480&amp;lang=ru_RU&amp;scroll=false"></script>
-				</div>
-				<div class="footer__map" id="footerMap2">
-					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4adcf4b90085619eba132827963f1bb9046b1fe5bb8bef206e80f3ed38ad8d01&amp;width=100%25&amp;height=250&amp;lang=ru_RU&amp;scroll=false"></script>
-				</div>
-			</div>
-		</div>
-		
-	</div>
-
-	<div class="footer__menu">
-		
-		<div class="container">
-
-			<div class="footer__menu__flex">
-				<!-- Логотип -->
-				
-				<div class="footer__info header__info">
-					<a href="#" class="header__logo">
-						<img src="app/img/logo.svg" alt="" class="header__logo__img">
-						<p class="footer__logo__text header__logo__text"><span>РЕМХОЛД</span> <br> Ремонт холодильников на дому в СПб и пригороде</p>
 					</a>
-				</div>
-				
-				<!-- Main-menu -->
-				
-				<nav class="footer__nav menu">
-					<ul class="footer__menu-main menu-main">
-						<li class="menu-item">
-							<a href="#main-banner" class="scroll footer__menu__link nav-link">Главная</a>
-						</li>
-						<li class="menu-item">
-							<a href="#seo" class="scroll footer__menu__link nav-link">О нас</a>
-						</li>
-						<li class="menu-item">
-							<a href="#reviews" class="scroll footer__menu__link nav-link">Отзывы</a>
-						</li>
-						<li class="menu-item">
-							<a href="#" class="scroll footer__menu__link nav-link">Преподаватели</a>
-						</li>
-						<li class="menu-item">
-							<a href="#footer" class="scroll footer__menu__link nav-link">Контакты</a>
-						</li>
-						<li class="menu-item">
-							<a href="#" class="scroll footer__menu__link nav-link">Курсы с трудоустройством</a>
-						</li>
-					</ul>
-				</nav>
-				
-				<!-- Телефон + кнопка -->
-				
-				<div class="footer__contacts header__contacts">
-					
-					<a href="tel:8(800)700-8000" class="footer__contacts__phone header__phone">8 (800) 700-8000</a>
-				
-					<button data-remodal-target="modal" class="btn footer__menu__btn">Оставить заявку</button>
-				
+					<div class="header-city d-none d-md-block">
+						<div class="header-city__result">Санкт Петербург</div>
+						<ul>
+							<li>Санкт Петербург 2</li>
+							<li>Санкт Петербург 3</li>
+						</ul>
+					</div>
 				</div>
 			</div>
-
+			<div class="col-lg-6 col-md-6 d-none d-md-block">
+				<div class="flex justify-content-end align-items-center">
+					<div class="header-contacts">
+						<a href="tel:88126034676">+7 (812) 603-46-76</a>
+						<p>Работаем с 9:00 до 18:00</p>
+					</div>
+					<a href="#" data-toggle="modal" data-target="#call" class="red-button">Заказать звонок</a>
+				</div>
+			</div>
+			<div class="col-3 d-block d-md-none text-right">
+				<a href="#" class="mobile-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+				<div class="mobile-menu__block">
+					<ul>
+						<li><a href="#program">Программы</a></li>
+						<li><a href="#reviews">Отзывы</a></li>
+						<li><a href="#advantages">Преимущества</a></li>
+						<li><a href="#contacts">Контакты</a></li>
+					</ul>
+					<div class="text-center">
+						<div class="header-contacts">
+							<a href="tel:88126034676">+7 (812) 603-46-76</a>
+							<p>Работаем с 9:00 до 18:00</p>
+						</div>
+						<a href=href="#" data-toggle="modal" data-target="#call" class="red-button">Заказать звонок</a>
+					</div>
+				</div>
+			</div>
 		</div>
-
 	</div>
+</div>
 
-</footer>
+<div class="menu d-none d-md-block">
+	<div class="container">
+		<ul class="flex">
+			<li><a href="#program">Программы</a></li>
+			<li><a href="#reviews">Отзывы</a></li>
+			<li><a href="#advantages">Преимущества</a></li>
+			<li><a href="#contacts">Контакты</a></li>
+		</ul>
+	</div>
+</div>
 
-<!-- MODAL -->
+<div class="fixed-menu">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-3 col-md-3 col-9">
+				<a href="index.html" class="header-logo flex">
+					<img src="img/logo.png" alt="">
+					<div class="header-logo__text">
+						<p><span>Rbt</span> skill</p>
+						<p>Школа по ремонту техники</p>
+					</div>
+				</a>
+			</div>
+			<div class="col-lg-5 d-none d-lg-block">
+				<ul class="flex">
+					<li><a href="#program">Программы</a></li>
+					<li><a href="#reviews">Отзывы</a></li>
+					<li><a href="#advantages">Преимущества</a></li>
+					<li><a href="#contacts">Контакты</a></li>
+				</ul>
+			</div>
+			<div class="col-lg-4 d-none d-md-block col-md-7">
+				<div class="flex justify-content-end align-items-center">
+					<div class="header-contacts">
+						<a href="tel:88126034676">+7 (812) 603-46-76</a>
+						<p>Работаем с 9:00 до 18:00</p>
+					</div>
+					<a href=href="#" data-toggle="modal" data-target="#call" class="red-button">Заказать звонок</a>
+				</div>
+			</div>
+			<div class="col-md-2 col-3 d-block d-lg-none text-right">
+				<a href="#" class="mobile-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+				<div class="mobile-menu__block">
+					<ul>
+						<li><a href="#">Программы</a></li>
+						<li><a href="#">Отзывы</a></li>
+						<li><a href="#">Преимущества</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+					<div class="text-center">
+						<div class="header-contacts">
+							<a href="tel:88126034676">+7 (812) 603-46-76</a>
+							<p>Работаем с 9:00 до 18:00</p>
+						</div>
+						<a href=href="#" data-toggle="modal" data-target="#call" class="red-button">Заказать звонок</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-<div id="modalBefore" class="remodal" data-remodal-id="modal"
-data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
-    <button data-remodal-action="close" class="remodal-close"></button>
-    <div id="form-modal-thx">
-        <div class="modal-title">Связь с нами</div>
-        <div class="modal-subtitle">Заполните форму ниже и мы перезвоним <br> Вам в течение 5 минут</div>
-
-		<form action="POST">
-			<input required type="text" class="modal__input" placeholder="Ваше имя">
-			<input required id="phone-modal" type="text" class="modal__input" placeholder="Ваш телефон">
-			<button>Перезвоните мне</button>
+<div class="slider text-center">
+	<div class="container">
+		<h1 class="slider-title"><span>Учебные центры</span> курсов по<br> ремонту техники</h1>
+		<div class="slider-hours">40 часов до новой высокооплачиваемой профессии </div>
+		<form method="post" class="slider-form">
+			<div class="slider-form__title">Запишитесь на курс до 27 Марта и получите скидку 30%</div>
+			<div class="flex align-items-center justify-content-center">
+				<span><input type="text" name="phone" placeholder="Ваш номер телефона" required></span>
+				<span><button class="red-button">Оставить заявку</button></span>
+			</div>
+			<p>Нажимая кнопку «Оставить заявку», вы даете согласие на обработку ваших<br> персональных данных.</p>
 		</form>
-		<div class="modal-text">Нажимая кнопку "Перезвоните мне" Вы соглашаетесь <br> на <a class="policy__link" href="#">обработку ваших персональных данных</a></p></div>
 	</div>
 </div>
 
-<div id="modalBefore" class="remodal" data-remodal-id="modal-review"
-data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
-    <button data-remodal-action="close" class="remodal-close"></button>
-    <div id="form-modal-thx">
-        <div class="modal-title">Связь с нами</div>
-        <div class="modal-subtitle">Заполните форму ниже и мы перезвоним <br> Вам в течение 5 минут</div>
+<div class="container">
+	<div class="training">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-4">
+				<div class="block-title">За время обучения <span>вы освоите</span> как:</div>
+				<ul>
+					<li>Проводить диагностику наиболее частых поломок бытовой техники</li>
+					<li>Осуществить ремонт практически любых бытовых приборов самостоятельно</li>
+					<li>Пользоваться приборами для измерения</li>
+				</ul>
+			</div>
+			<img src="img/training-image.png" class="training-image d-none d-lg-block" alt="">
+		</div>
+	</div>
+	<div class="program">
+		<div class="block-title text-center"><span>Программы</span> обучения</div>
+		<div class="program-item">
+			<div class="row align-items-center">
+				<div class="col-lg-6">
+					<div class="program-item__image" style="background-image: url('img/program/program-img1.jpg');"></div>
+				</div>
+				<div class="col-lg-6">
+					<div class="program-item__title">Ремонт стиральных и посудомоечных машин <span>(Занятие 5 дней)</span></div>
+					<p>
+						<b>Программа курса "Ремонт стиральных и посудомоечных машин":</b><br> 
+						Семичасовое обучение проходит с 10:00 до 17:00 в течение 5 рабочих дней<br> 
+						- В программу курса включены занятия по теории, проводимые в специализированном классе в течение 7 часов<br>
+						- В последний день обучения вы закрепите пройденный материал и получите Свидетельство об окончании курса
+					</p>
+					<div class="program-item__buttons">
+						<div class="row align-items-center">
+							<div class="col-lg-6 col-md-6">
+								<div class="program-item__buttons-price">
+									5000 Руб.
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 text-right">
+								<a href="#" data-toggle="modal" data-target="#call" class="red-button">Записаться на курс</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="program-item">
+			<div class="row align-items-center">
+				<div class="col-lg-6">
+					<div class="program-item__image" style="background-image: url('img/program/program-img2.jpg');"></div>
+				</div>
+				<div class="col-lg-6">
+					<div class="program-item__title">Ремонт холодильников <span>(Занятие 5 дней)</span></div>
+					<p>
+						<b>Программа курса "Ремонт холодильников":</b><br> 
+						Семичасовое обучение проходит с 10:00 до 17:00 в течение 5 рабочих дней<br> 
+						- В программу курса включены занятия по теории, проводимые в специализированном классе в течение 7 часов<br>
+						- В последний день обучения вы закрепите пройденный материал и получите Свидетельство об окончании курса
+					</p>
+					<div class="program-item__buttons">
+						<div class="row align-items-center">
+							<div class="col-lg-6 col-md-6">
+								<div class="program-item__buttons-price">
+									6000 Руб.
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 text-right">
+								<a href="#" data-toggle="modal" data-target="#call" class="red-button">Записаться на курс</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-		<form action="POST">
-			<input required type="text" class="modal__input" placeholder="Ваше имя">
-			<input required id="phone-modal" type="text" class="modal__input" placeholder="Ваш телефон">
-			<textarea required class="modal__input" name="" id="" placeholder="Ваш отзыв" cols="30" rows="10"></textarea>
-			<button>Перезвоните мне</button>
+<div class="coach">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-5 text-center d-none d-lg-block">
+				<img src="img/coach-image.png">
+			</div>
+			<div class="col-lg-7">
+				<div class="coach-name">
+					<div class="flex align-items-center">
+						<img src="img/logo.png" alt="">
+						<p>Антон Фролов</p>
+					</div>
+				</div>
+				<div class="coach-skills">Техник широкого профиля, преподаватель по курсам ремонта<br> бытовой техники и инженерных сетей</div>
+				<div class="coach-text">
+					Я работаю с техникой всю жизнь: моя профессиональная деятельность, а также мой бизнес и все мои проекты всегда были тесно связаны с различными техническими областями. Я досконально разбираюсь в устройстве и принципе работы большинства моделей бытовой и промышленной техники, представленной в настоящее время на рынке.
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="place">
+		<div class="row align-items-center">
+			<div class="col-lg-6">
+				<div class="block-title">Успейте <span>оформить</span><br> место на курс!</div>
+				<div class="place-price">
+					<div class="flex align-items-center">
+						<div class="place-price__new">5 300 руб.</div>
+						<div class="place-price__old">8000 руб.</div>
+					</div>
+				</div>
+				<div class="place-text">
+					Цена со скидкой только до 4 апреля!
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<form class="place-form">
+					<div class="place-form__title text-center">
+						<b>Оставьте свой номер</b>
+						телефона, и наши менеджеры свяжутся с вами.
+					</div>
+					<div class="flex align-items-center justify-content-center">
+						<span><input type="text" name="phone" placeholder="Ваш номер " required=""></span>
+						<span><button class="red-button">Оформить заявку</button></span>
+					</div>
+					<p>Нажимая кнопку “Оформить заявку”, вы соглашаетесь на обработку<br> Ваших персональных данных.</p>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="reviews">
+		<div class="block-title text-center"><span>Отзывы</span> наших учеников</div>
+		<div class="reviews-block">
+			<div class="reviews-slider swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="reviews-slider__item">
+							<div class="row align-items-center">
+								<div class="col-lg-6 col-md-6">
+									<div class="reviews-slider__block">
+										<div class="reviews-slider__item-name">Андрей Пахомов</div>
+										<div class="reviews-slider__item-course">Курсы по ремонту бытовой<br> техники</div>
+										<p>
+											К технике я был неравнодушен еще с детских лет, всегда нравилось в этом разбираться. А если нравится чем-то заниматься, почему бы не начать зарабатывать на своем хобби! Пошел на курсы по ремонту холодильников и не пожалел — преподаватель опытный, объясняет все доступно. Рекомендую!
+										</p>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="reviews-item__image" style="background-image: url('img/reviews/reviews-image1.jpg');"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="reviews-slider__item">
+							<div class="row align-items-center">
+								<div class="col-lg-6 col-md-6">
+									<div class="reviews-slider__block">
+										<div class="reviews-slider__item-name">Станислав Бочкарев</div>
+										<div class="reviews-slider__item-course">Курсы по ремонту бытовой<br> техники</div>
+										<p>
+											Друг посоветовал ваши курсы, он их уже закончил и успешно работает мастером по ремонту стиральных машин. Мне все понравилось, обучение стоит не так уж дорого, быстро окупается, понравилась подача материала, что не только теория, но и на практике многое показывают. Спасибо, что дали освоить востребованную профессию!
+										</p>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="reviews-item__image" style="background-image: url('img/reviews/30.jpg');"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="reviews-slider__item">
+							<div class="row align-items-center">
+								<div class="col-lg-6 col-md-6">
+									<div class="reviews-slider__block">
+										<div class="reviews-slider__item-name">Георгий Мельников</div>
+										<div class="reviews-slider__item-course">Курсы по ремонту бытовой<br> техники</div>
+										<p>
+											Даже не ожидал, что новую профессию можно освоить всего за 5 дней. Но это реально так! Здесь дают не только документ – свидетельство об окончании курсов, но и реальные знания. Уже нашел работу по новой специальности. Спасибо вам на науку!
+										</p>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="reviews-item__image" style="background-image: url('img/reviews/31.jpg');"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="reviews-slider__item">
+							<div class="row align-items-center">
+								<div class="col-lg-6 col-md-6">
+									<div class="reviews-slider__block">
+										<div class="reviews-slider__item-name">Игорь Цветков</div>
+										<div class="reviews-slider__item-course">Курсы по ремонту бытовой<br> техники</div>
+										<p>
+											Сократили на работе, срочно пришлось искать другой способ заработка. Что оплатил обучение по ремонту стиральных и посудомоечных машин в школе ремонта бытовой техники RBT SKILL ничуть не пожалел. Меньше чем за неделю объем информации дают просто огромный, преподаватель на все вопросы отвечает, делится собственным опытом. Подготовка достойная, советую!
+										</p>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="reviews-item__image" style="background-image: url('img/reviews/32.jpg');"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="reviews-slider__item">
+							<div class="row align-items-center">
+								<div class="col-lg-6 col-md-6">
+									<div class="reviews-slider__block">
+										<div class="reviews-slider__item-name">Марк Жулебин</div>
+										<div class="reviews-slider__item-course">Курсы по ремонту бытовой<br> техники</div>
+										<p>
+											Изучил курс по ремонту холодильников. Всё понравилось — информация без воды, всё по делу. Преподаватель, всё что надо для начала работы рассказал и показал, а дальше уже своей головой надо думать и своими руками делать! Буду советовать этот курс друзьям!
+										</p>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="reviews-item__image" style="background-image: url('img/reviews/33.jpg');"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="reviews-slider__item">
+							<div class="row align-items-center">
+								<div class="col-lg-6 col-md-6">
+									<div class="reviews-slider__block">
+										<div class="reviews-slider__item-name">Алексей Старыгин</div>
+										<div class="reviews-slider__item-course">Курсы по ремонту бытовой<br> техники</div>
+										<p>
+											Прошел курсы по ремонту и холодильников и стиралок и посудомоек. Получил все, что надо для дальнейшей работы. Дают не просто теорию из учебников, а реальные знания. Видно, что препод сам техникой увлечен, много лет занимается этой сферой. Это самое важное, я считаю, получить советы от практика своего дела! 
+										</p>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="reviews-item__image" style="background-image: url('img/reviews/34.jpg');"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="reviews-slider__item">
+							<div class="row align-items-center">
+								<div class="col-lg-6 col-md-6">
+									<div class="reviews-slider__block">
+										<div class="reviews-slider__item-name">Николай Минаев</div>
+										<div class="reviews-slider__item-course">Курсы по ремонту бытовой<br> техники</div>
+										<p>
+											Идея прийти на курсы пришла, если честно, когда сам отдал мастеру кругленькую сумму за ремонт стиральной машины. Долго выбирал, куда пойти учиться, не хотелось ошибиться, выкинуть деньги на ветер. Выбрал Школу по ремонту техники «RBT SKILL» и не прогадал! Реально научили в технике разбираться и свидетельство выдали — я доволен.
+										</p>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="reviews-item__image" style="background-image: url('img/reviews/35.jpg');"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-buttons">
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="after">
+	<div class="container">
+		<div class="block-title text-center">После окончания курса <span>вы сможете:</span></div>
+		<div class="row">
+			<div class="col-lg-3 col-md-6">
+				<div class="after-item">
+					<div class="after-item__image" style="background-image: url('img/after/after-image1.jpg');"></div>
+					<div class="after-item__block">
+						<div class="after-item__block-title">
+							Выявлять основные<br> неисправности
+						</div>
+						<p>Вы узнаете, как проводить диагностику часто встречающихся неисправностей бытовой техники и изучите основные принципы техники безопасности, которые необходимо соблюдать при ремонте бытовой техники.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="after-item">
+					<div class="after-item__image" style="background-image: url('img/after/after-image2.jpg');"></div>
+					<div class="after-item__block">
+						<div class="after-item__block-title">
+							Разбираться<br> в элементах
+						</div>
+						<p>Вы научитесь правильно разбирать корпус приборов и производить монтаж и демонтаж блоков питания, выключателей и проводки.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="after-item">
+					<div class="after-item__image" style="background-image: url('img/after/after-image3.jpg');"></div>
+					<div class="after-item__block">
+						<div class="after-item__block-title">
+							Разбираться в<br> электронных модулях
+						</div>
+						<p>Мы расскажем всё об устройстве электропривода: вы освоите сборку и разборку редуктора, узнаете, как следует производить замену приводных ремней, как починить или заменить электронные модули (клавиатуры, дисплеи, платы управления) различных бытовых приборах.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="after-item">
+					<div class="after-item__image" style="background-image: url('img/after/after-image4.jpg');"></div>
+					<div class="after-item__block">
+						<div class="after-item__block-title">
+							Чинить любую<br> бытовую технику
+						</div>
+						<p>После окончания наших курсов вы сможете самостоятельно отремонтировать большую часть бытовых приборов, которыми вы пользуетесь в быту: чайники, микроволновки, кухонные комбайны, пылесосы и многие-многие другие.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="advantages">
+		<div class="block-title text-center">Наши <span>преимущества</span></div>
+		<div class="row">
+			<div class="col-lg-3 col-md-6">
+				<div class="advantages-item">
+					<div class="advantages-item__icon">
+						<img src="img/advantages/academic.png" alt="">
+					</div>
+					<p>Учиться просто и удобно: наш курс включает в себя 6 занятий по 2,5 академических часа</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="advantages-item">
+					<div class="advantages-item__icon">
+						<img src="img/advantages/list.png" alt="">
+					</div>
+					<p>Вы сможете менять график занятий и посетить пропущенные уроки в другие дни</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="advantages-item">
+					<div class="advantages-item__icon">
+						<img src="img/advantages/repair.png" alt="">
+					</div>
+					<p>Мы предоставим вам все необходимые материалы, инструменты и технику для занятий</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="advantages-item">
+					<div class="advantages-item__icon">
+						<img src="img/advantages/team.png" alt="">
+					</div>
+					<p>Обучение новой группы стартует каждую неделю, присоединяйтесь в любой день</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="sertificate">
+		<div class="row align-items-center">
+			<div class="col-lg-8">
+				<div class="sertificate-title">Ваши знания<br> подтверждения</div>
+				<div class="sertificate-text">По окончанию курсов вы <span>гарантированно</span> получите<br> сертификат нашей школы </div>
+			</div>
+			<div class="col-lg-4 text-center">
+				<img src="img/sertificate.jpg" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="main-form text-center">
+		<div class="block-title"><span>Я хочу</span> заниматься в группе</div>
+		<div class="main-form__text">Отправьте заявку, чтобы получить информацию по расписанию занятий<br> и условиям обучения.</div>
+		<form method="post">
+			<div class="row">
+				<div class="col-lg-4 col-md-4">
+					<span><input type="text" name="first_name" placeholder="Ваше имя " required></span>
+				</div>
+				<div class="col-lg-4 col-md-4">
+					<span><input type="text" name="last_name" placeholder="Ваш фамилия " required></span>
+				</div>
+				<div class="col-lg-4 col-md-4">
+					<span><input type="text" name="first_name" placeholder="Ваш телефон " required></span>
+				</div>
+			</div>
+			<div class="text-center">
+				<button class="red-button">
+					Заказать звонок
+				</button>
+				<p>Нажимая кнопку “Заказать звонок”, вы соглашаетесь на обработку<br> Ваших персональных данных.</p>
+			</div>
 		</form>
-		<div class="modal-text">Нажимая кнопку "Перезвоните мне" Вы соглашаетесь <br> на <a class="policy__link" href="#">обработку ваших персональных данных</a></p></div>
 	</div>
 </div>
 
-<div id="modalAfter" class="remodal remotal-ty" data-remodal-id="modal-message"
-data-remodal-options="hashTracking: false, closeOnOutsideClick: false">
-    <button data-remodal-action="close" class="remodal-close"></button>
-    <div id="form-modal-feedback-thx">
-        <div class="modal-title">Cпасибо!</div>
-        <div>Мы перезвоним вам в течение 5 минут</div>
-        <button>Жду звонка</button>
-        
-    </div>
+<div class="contacts">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5">
+				<div class="block-title">Наши контакты</div>
+				<div class="contacts-subtitle">свяжитесь с нами любым удобным для Вас способом</div>
+				<a href="tel:88126032681" class="contacts-phone">8 (812) 603-2681</a>
+				<div class="contacts-form">
+					<div class="contacts-form__title">Задайте нам вопрос</div>
+					<form method="post">
+						<div class="row">
+							<div class="col-lg-6">
+								<span><input type="text" name="name" placeholder="Ваше имя" required></span>
+							</div>
+							<div class="col-lg-6">
+								<span><input type="text" name="name" placeholder="Ваш телефон " required></span>
+							</div>
+						</div>
+						<span>
+							<textarea name="message" placeholder="Ваш комментарий "></textarea>
+						</span>
+						<div class="flex align-items-center">
+							<button class="red-button">Отправить</button>
+							<p>Нажимая кнопку “Отправить” Вы соглашаетесь<br> на обработку Ваших данных</p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="contacts-map">
+		<div class="contacts-map__menu">
+			<div class="contacts-map__menu-title">Мы всегда находимся в центре города</div>
+			<ul class="flex">
+				<li class="flex align-items-center justify-content-center"><i class="bus"></i> <span>Рижский проспект</span></li>
+				<li class="flex align-items-center justify-content-center"><i class="metro"></i> <span>Метро балтийская</span></li>
+				<li class="flex align-items-center justify-content-center"><i class="metro"></i> <span>Технологический<br> институт</span></li>
+			</ul>
+		</div>
+	</div>
 </div>
 
-<!-- SCRIPTS -->
+<div class="footer">
+	<div class="container">
+		<div class="flex align-items-center">
+			<a href="index.html" class="footer-logo flex">
+				<img src="img/logo.png"  width="29">
+				<div class="footer-logo__text">
+					<p><span>Rbt</span> skill</p>
+					<p>Школа по ремонту техники</p>
+				</div>
+			</a>
+			<ul class="footer-menu flex">
+				<li><a href="#">Программы</a></li>
+				<li><a href="#">Отзывы</a></li>
+				<li><a href="#">Преимущества</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			<a href="#" class="footer-policy">Политика конфиденциальности</a>
+			<div class="footer-contacts">
+				<a href="tel:88126034676">+7 (812) 603-46-76</a>
+				<p>Работаем с 9:00 до 18:00</p>
+			</div>
+			<a href="#" class="red-button">Заказать звонок</a>
+		</div>
+	</div>
+</div>
 
-<script src="app/js/vendor.js"></script>
-<script src="app/js/scripts.js"></script>
+<div class="modal fade popup" id="call" tabindex="-1" role="dialog" aria-labelledby="call" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			<div class="block-title text-center">Заполните форму ниже и мы перезвоним Вам<br> за 5 минут!</div>
+			<form method="post" class="popup-form">
+				<span>
+					<input type="text" name="name" placeholder="Ваше имя ">
+				</span>
+				<span>
+					<input type="text" name="phone" placeholder="Ваш телефон ">
+				</span>
+				<button class="red-button thanks-open">Перезвоните мне</button>
+			</form>
+			<p>Нажимая кнопку “Перезвоните мне” Вы соглашаетесь на обработку<br> Ваших данных.</p>
+		</div>
+	</div>
+</div>
 
+<div class="modal fade popup" id="thanks" tabindex="-1" role="dialog" aria-labelledby="thanks" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			<div class="block-title text-center">Спасибо! мы перезвоним Вам за 5 минут!</div>
+			<div class="popup-form">
+				<button class="red-button thanks-close">Хорошо</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="js/vendor.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
