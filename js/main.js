@@ -51,7 +51,8 @@ $(function() {
 
     //MAIN POP-UP
     // open
-    $('.js-button-campaign').click(function() {
+    $('.js-button-campaign').click(function(e) {
+        e.preventDefault();
         $('.js-overlay-campaign').fadeIn();
         $('.js-overlay-campaign').addClass('disabled');
     });
@@ -62,7 +63,8 @@ $(function() {
     });
 
     // open
-    $('.js-button-review').click(function() {
+    $('.js-button-review').click(function(e) {
+        e.preventDefault();
         $('.js-overlay-review').fadeIn();
         $('.js-overlay-review').addClass('disabled');
     });
