@@ -60,6 +60,34 @@ $(function() {
         $('.js-overlay-campaign').fadeOut();
 
     });
+
+    // open
+    $('.js-button-review').click(function() {
+        $('.js-overlay-review').fadeIn();
+        $('.js-overlay-review').addClass('disabled');
+    });
+    // close popup
+    $('.js-close-review').click(function() {
+        $('.js-overlay-review').fadeOut();
+
+    });
+
+    // close popup windows out
+    $(document).mouseup(function(e) {
+        var popup = $('.js-popup-review');
+        if (e.target != popup[0] && popup.has(e.target).length === 0) {
+            $('.js-overlay-review').fadeOut();
+        }
+    });
+    $('.send').click(function() {
+        $('.popup-form').removeClass();
+        $('.popup-final').addClass();
+    });
+    $('.close').click(function() {
+        $('.overlay').fadeOut();
+
+    });
+
     // close popup windows out
     $(document).mouseup(function(e) {
         var popup = $('.js-popup-campaign');
@@ -212,3 +240,15 @@ $(function() {
       })
 
 });
+
+var now = new Date(),
+now_day = now.getDate() + 5;
+
+const monthNames = [
+    "января", "февраля", "марта", "апреля", "мая", "июня",
+  "июля", "августа", "сентября", "октября", "ноября", "декабря"
+];
+
+var day_result = monthNames[now.getMonth()];
+
+$('.load-date').text(now_day +' '+ day_result);

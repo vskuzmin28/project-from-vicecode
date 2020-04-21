@@ -13,7 +13,7 @@
     <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <title>RemTv</title>
+    <title>Срочный ремонт телевизоров</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -28,6 +28,7 @@
                         <img src="./img/logo.svg" alt="">
                         <p>rem<span>tv</span></p>
                     </a>
+                    <p>ремонт телевизоров</p>
                 </div>
                 <div class="header-container__select">
                     <select name="town" id="choiceTown">
@@ -142,7 +143,7 @@
             <p class="header-text">Хотите Получить Бесплатную Диагностику Специалиста?</p>
             <div class="header-sale">
                 <a href="#" class="header-sale__link js-button-campaign">Получить консультацию сейчас</a>
-                <span>Акция действует до 19.10.2019</span>
+                <span>Акция действует до <i class="load-date"></i></span>
             </div>
             <div class="description-container">
                 <div class="description-item">
@@ -176,6 +177,29 @@
                         <button type="submit" class="close">Подтвердить</button>
                     </div>
                     <div class="close-popup js-close-campaign"></div>
+                </div>
+            </div>
+
+            <div class="overlay js-overlay-review">
+                <div class="popup js-popup-review">
+                    <div class="popup-form">
+                        <h2>Оставьте свой отзыв</h2>
+                        <form action="#">
+                            <input type="text" id="name" placeholder="Ваше имя" required>
+                            <input type="tel" placeholder="Ваш телефон" id="popupPhone" required>
+                            <br>
+                            <textarea placeholder="Отзыв" required></textarea>
+                            <br>
+                            <button type="submit" class="send">Отправить</button>
+                        </form>
+                        <p class="popup-subtitle">Нажимая кнопку отправить Вы соглашаетесь с обработкой Вашех персональных данных</p>
+                    </div>
+                    <div class="popup-final">
+                        <h2>Спасибо!</h2>
+                        <p>В ближайшее время наш оператор свяжется с Вами!</p>
+                        <button type="submit" class="close">Подтвердить</button>
+                    </div>
+                    <div class="close-popup js-close-review"></div>
                 </div>
             </div>
 
@@ -299,7 +323,7 @@
                             <img src="./img/no-display.png" alt="">
                         </div>
                     </div>
-                    <div class="holder-item">
+                    <div class="holder-item holder-item_fix2">
                         <div class="holder-title">
                             <img src="./img/programmable.svg" alt="">
                             <span>Нет звука</span>
@@ -341,7 +365,7 @@
                             <img src="./img/no-sound.png" alt="">
                         </div>
                     </div>
-                    <div class="holder-item">
+                    <div class="holder-item holder-item_fix">
                         <div class="holder-title">
                             <img src="./img/internet.svg" alt="">
                             <span>Нет сигнала</span>
@@ -393,7 +417,7 @@
                                 <a href="#">Заказать</a>
                             </div>
                         </div>
-                        <div class="holder-item__router">
+                        <div class="holder-item__mat">
                             <img src="./img/no-signal.png" alt="">
                         </div>
                     </div>
@@ -543,7 +567,7 @@
                     </div>
                 </div>
                 <div class="rewiews-btn">
-                    <a href="#">Оставить мой отзыв</a>
+                    <a href="#" class="js-button-review">Оставить мой отзыв</a>
                 </div>
             </div>
         </section>
