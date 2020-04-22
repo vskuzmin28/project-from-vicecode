@@ -1,11 +1,17 @@
 $(function() {
     //REWIEWS SLIDER
+    $(function() {
     $('.rewiews-slider').slick({
+        accessibility: false,
+        verticalSwiping: false,
         slidesToShow: 2,
         slidesToScroll: 1,
         responsive: [{
                 breakpoint: 900,
+                accessibility: false,
                 settings: {
+                    accessibility: false,
+                    accessibility: false,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     infinite: true
@@ -13,8 +19,9 @@ $(function() {
                 }
             },
             {
-                breakpoint: 700,
+                breakpoint: 900,
                 settings: {
+                    accessibility: false,
                     slidesToShow: 1,
                     slidesToScroll: 1
                 }
@@ -23,7 +30,7 @@ $(function() {
         prevArrow: '<img class="slider arrows slider-arrows__left" src="./img/arrow-left.png" alt=""></img>',
         nextArrow: '<img class="slider arrows slider-arrows__right"  src="./img/arrow-right.png" alt=""></img>',
     });
-
+});
     //BURGER MENU
     $(function() {
         $('.btn-menu').on('click', function() {
@@ -46,8 +53,6 @@ $(function() {
     $(document).ready(function() {
         $('#popupPhone').mask('+7 (999) 99-99-999');
     });
-
-
 
     //MAIN POP-UP
     // open
