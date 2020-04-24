@@ -6084,6 +6084,7 @@ textarea {
     position: absolute;
     left: 0;
     right: 0;
+    bottom: -105px;
     margin: auto;
     max-width: 420px
 }
@@ -7321,9 +7322,12 @@ textarea {
     .rewiews .container {
         position: relative;
     }
-
+    .rewiews .container .rewiews-container .container-item .container-item__image-tv {bottom: -15px; z-index: 5;}
+    .rewiews .container .rewiews-container .container-item {margin: 0;}
+    .rewiews .container .rewiews-container {margin-bottom: 40px;}
+    #our-rewiews {padding-top: 30px;}
 }
-
+.description-item {cursor: pointer;}
 .holder-item_fix {
     height: 720px;
 }
