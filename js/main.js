@@ -1,38 +1,36 @@
-$(function() {
-    //REWIEWS SLIDER
-    $(function() {
-    $('.rewiews-slider').slick({
-        accessibility: false,
-        verticalSwiping: false,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        responsive: [{
-                breakpoint: 900,
-                accessibility: false,
-                settings: {
-                    accessibility: false,
-                    accessibility: false,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true
+(function ($) {
+    $(document).ready(function () {
 
-                }
-            },
-            {
-                breakpoint: 900,
-                settings: {
+        $('.rewiews-slider').slick({
+            accessibility: false,
+            verticalSwiping: false,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            responsive: [{
+                    breakpoint: 900,
                     accessibility: false,
-                    slidesToShow: 1,
-                    slidesToScroll: 1
+                    settings: {
+                        accessibility: false,
+                        accessibility: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true
+
+                    }
+                },
+                {
+                    breakpoint: 900,
+                    settings: {
+                        accessibility: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
                 }
-            }
-        ],
-        prevArrow: '<img class="slider arrows slider-arrows__left" src="./img/arrow-left.png" alt=""></img>',
-        nextArrow: '<img class="slider arrows slider-arrows__right"  src="./img/arrow-right.png" alt=""></img>',
-    });
-});
-    //BURGER MENU
-    $(function() {
+            ],
+            prevArrow: '<img class="slider arrows slider-arrows__left" src="./img/arrow-left.png" alt=""></img>',
+            nextArrow: '<img class="slider arrows slider-arrows__right"  src="./img/arrow-right.png" alt=""></img>',
+        });
+
         $('.btn-menu').on('click', function() {
             $('.menu').addClass('active')
         });
@@ -44,218 +42,101 @@ $(function() {
         $('.btn-close').on('click', function() {
             $('.menu').removeClass('active')
         });
-    });
 
-    //PHONE MASK
-    $(document).ready(function() {
-        $('#phone').mask('+7 (999) 99-99-999');
-    });
-    $(document).ready(function() {
-        $('#popupPhone').mask('+7 (999) 99-99-999');
-    });
-
-    //MAIN POP-UP
-    // open
-    $('.js-button-campaign').click(function(e) {
-        e.preventDefault();
-        $('.js-overlay-campaign').fadeIn();
-        $('.js-overlay-campaign').addClass('disabled');
-    });
-    // close popup
-    $('.js-close-campaign').click(function() {
-        $('.js-overlay-campaign').fadeOut();
-
-    });
-
-    // open
-    $('.js-button-review').click(function(e) {
-        e.preventDefault();
-        $('.js-overlay-review').fadeIn();
-        $('.js-overlay-review').addClass('disabled');
-    });
-    // close popup
-    $('.js-close-review').click(function() {
-        $('.js-overlay-review').fadeOut();
-
-    });
-
-    // close popup windows out
-    $(document).mouseup(function(e) {
-        var popup = $('.js-popup-review');
-        if (e.target != popup[0] && popup.has(e.target).length === 0) {
-            $('.js-overlay-review').fadeOut();
-        }
-    });
-    $('.send').click(function() {
-        $('.popup-form').removeClass();
-        $('.popup-final').addClass();
-    });
-    $('.close').click(function() {
-        $('.overlay').fadeOut();
-
-    });
-
-    // close popup windows out
-    $(document).mouseup(function(e) {
-        var popup = $('.js-popup-campaign');
-        if (e.target != popup[0] && popup.has(e.target).length === 0) {
+        $('.js-button-campaign').click(function(e) {
+            e.preventDefault();
+            $('.js-overlay-campaign').fadeIn();
+            $('.js-overlay-campaign').addClass('disabled');
+        });
+        $('.js-close-campaign').click(function() {
             $('.js-overlay-campaign').fadeOut();
-        }
-    });
-    $('.send').click(function() {
-        $('.popup-form').removeClass();
-        $('.popup-final').addClass();
-    });
-    $('.close').click(function() {
-        $('.overlay').fadeOut();
 
-    });
-
-    //START SALE FORM 
-    $(document).ready(function() {
-        $('#sale-contact__form').submit(function() {
-            if (document.form.salePhone.value == '') {
-                valid = false;
-                return valid;
-            }
-            $.ajax({
-                type: "POST",
-                url: "",
-                data: $(this).serialize()
-            }).done(function() {
-
-                $('.overlay-sale').fadeIn();
-
-                $(this).find('input').val('');
-                $('#sale-contact__form').trigger('reset');
-            });
-            return false;
         });
-    });
-    $('.close-popup').click(function() {
-        $('.overlay-sale').fadeOut();
-    });
-    $(document).mouseup(function(e) {
-        var popup = $('.popup-sale');
-        if (e.target != popup[0] && popup.has(e.target).length === 0) {
+
+        $('.js-button-review').click(function(e) {
+            e.preventDefault();
+            $('.js-overlay-review').fadeIn();
+            $('.js-overlay-review').addClass('disabled');
+        });
+        $('.js-close-review').click(function() {
+            $('.js-overlay-review').fadeOut();
+
+        });
+
+        $(document).mouseup(function(e) {
+            var popup = $('.js-popup-review');
+            if (e.target != popup[0] && popup.has(e.target).length === 0) {
+                $('.js-overlay-review').fadeOut();
+            }
+        });
+
+        $('.send').click(function() {
+            $('.popup-form').removeClass();
+            $('.popup-final').addClass();
+        });
+        $('.close').click(function() {
+            $('.overlay').fadeOut();
+
+        });
+
+        $(document).mouseup(function(e) {
+            var popup = $('.js-popup-campaign');
+            if (e.target != popup[0] && popup.has(e.target).length === 0) {
+                $('.js-overlay-campaign').fadeOut();
+            }
+        });
+        $('.send').click(function() {
+            $('.popup-form').removeClass();
+            $('.popup-final').addClass();
+        });
+        $('.close').click(function() {
+            $('.overlay').fadeOut();
+
+        });
+
+        $('.close-popup').click(function() {
             $('.overlay-sale').fadeOut();
-        }
-    });
-    $(document).ready(function() {
-        $('#salePhone').mask('+7 (999) 99-99-999');
-    });
-
-    //START REPAIRS FORM
-    $(document).ready(function() {
-        $('#repairs-contact__form').submit(function() {
-            if (document.form.repairsPhone.value == '' || document.form.repairsText.value == '') {
-                valid = false;
-                return valid;
-            }
-            $.ajax({
-                type: "POST",
-                url: "",
-                data: $(this).serialize()
-            }).done(function() {
-
-                $('.overlay-repairs').fadeIn();
-
-                $(this).find('input').val('');
-                $('#repairs-contact__form').trigger('reset');
-            });
-            return false;
         });
-    });
-    $('.close-popup__repairs').click(function() {
-        $('.overlay-repairs').fadeOut();
-    });
-    $(document).mouseup(function(e) {
-        var popup = $('.popup-repairs');
-        if (e.target != popup[0] && popup.has(e.target).length === 0) {
+
+        $(document).mouseup(function(e) {
+            var popup = $('.popup-sale');
+            if (e.target != popup[0] && popup.has(e.target).length === 0) {
+                $('.overlay-sale').fadeOut();
+            }
+        });
+
+        $('.close-popup__repairs').click(function() {
             $('.overlay-repairs').fadeOut();
-        }
-    });
-    $(document).ready(function() {
-        $('#repairsPhone').mask('+7 (999) 99-99-999');
-    });
-    //END REPAIRS FORM
-
-
-    //START FOOTER FORM
-    $(document).ready(function() {
-        $('#footer-contact__form').submit(function() {
-            if (document.form.footerPhone.value == '' || document.form.footerName.value == '' || document.form.footerComment.value == '') {
-                valid = false;
-                return valid;
-            }
-            $.ajax({
-                type: "POST",
-                url: "",
-                data: $(this).serialize()
-            }).done(function() {
-                $('.overlay-footer').fadeIn();
-                $(this).find('input').val('');
-                $('#footer-contact__form').trigger('reset');
-            });
-            return false;
         });
+
+        $(document).mouseup(function(e) {
+            var popup = $('.popup-repairs');
+            if (e.target != popup[0] && popup.has(e.target).length === 0) {
+                $('.overlay-repairs').fadeOut();
+            }
+        });
+
+        $(window).scroll(function(){
+
+            if($(window).scrollTop() > 180){
+                $('.header_float').addClass('fixed');
+            } else {
+                $('.header_float').removeClass('fixed');
+            }
+
+        });
+
+        var now = new Date(),
+        now_day = now.getDate() + 5;
+
+        const monthNames = [
+            "января", "февраля", "марта", "апреля", "мая", "июня",
+          "июля", "августа", "сентября", "октября", "ноября", "декабря"
+        ];
+
+        var day_result = monthNames[now.getMonth()];
+
+        $('.load-date').text(now_day +' '+ day_result);
+
     });
-    $('.close-popup').click(function() {
-        $('.overlay-footer').fadeOut();
-    });
-    $(document).mouseup(function(e) {
-        var popup = $('.popup-repairs');
-        if (e.target != popup[0] && popup.has(e.target).length === 0) {
-            $('.overlay-footer').fadeOut();
-        }
-    });
-    $(document).ready(function() {
-        $('#footerPhone').mask('+7 (999) 99-99-999');
-    });
-
-    // float header
-
-    $('.header_float').hide();
-
-    function toggleHeader() {
-        let scroll_status = $(document).scrollTop();
-        let ww = $(window).width();
-        if (scroll_status > $(".header-navigation").height() && ww > 1000) {
-          $(".header_float").fadeIn();
-        }
-        else {
-            $(".header_float").fadeOut();
-        }
-      }
-
-      $(document).scroll(function () {
-        toggleHeader();
-      })
-
-      function toggleFirstHeader() {
-        let ww = $(window).width();
-        if (ww < 1000) {
-          $(".header-container").addClass('header_fixed');
-        }
-        else {
-            $(this).removeClass('header_fixed');
-        }
-      }
-
-      $(document).ready(function() {
-        toggleFirstHeader();
-      })
-
-});
-
-var now = new Date(),
-now_day = now.getDate() + 5;
-
-const monthNames = [
-    "января", "февраля", "марта", "апреля", "мая", "июня",
-  "июля", "августа", "сентября", "октября", "ноября", "декабря"
-];
-
-var day_result = monthNames[now.getMonth()];
-
-$('.load-date').text(now_day +' '+ day_result);
+})(jQuery);
