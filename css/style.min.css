@@ -7265,7 +7265,7 @@ textarea {
 
     .menu.active {
         position: fixed;
-        z-index: 20;
+        z-index: 100;
     }
 
     .rewiews .container .rewiews-subtitle {
