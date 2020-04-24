@@ -7175,6 +7175,14 @@ textarea {
     	z-index: 99;
     }
 
+    .rewiews .container .rewiews-slider .single-rewiews .single-rewiew__title,
+    .rewiews .container .rewiews-slider .single-rewiews .single-rewiw__text {text-align: center;}
+
+    .rewiews .container .rewiews-slider .single-rewiews .single-rewiw__text {
+    	margin: 0 0 50px;
+    	padding: 0 40px;
+    }
+
     .header .header-subtitle {
         
     }
