@@ -3622,7 +3622,8 @@ dd {
     padding-bottom: 84px
 }
 
-.header .header-container {
+.header .header-container {}
+.header .header-container--block {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3638,11 +3639,23 @@ dd {
     align-items: center;
     padding: 30px 0;
     background-color: #fff;
-    height: 94px
+    height: 94px;
+    max-width: 1080px;
+    width: 100%;
+    justify-content: space-between;
 }
-
+.header_float .header-container {
+	justify-content: space-between;
+}
 .header .header-container .logo {
     max-width: 140px
+}
+.header-contactainer__contacts {
+	display: flex;
+	align-items: center;
+}
+.menu {
+	z-index: 99;
 }
 
 .header .header-container .logo a {
@@ -7265,7 +7278,7 @@ textarea {
 
     .menu.active {
         position: fixed;
-        z-index: 100;
+        z-index: 999;
     }
 
     .rewiews .container .rewiews-subtitle {
@@ -7334,4 +7347,8 @@ textarea {
 
 .holder-item_fix2 {
     height: 720px;
+}
+.footer-policy {
+	font-size: 12px;
+	line-height: 12px;
 }
