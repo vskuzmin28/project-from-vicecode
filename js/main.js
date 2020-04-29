@@ -127,7 +127,9 @@
         });
 
         var now = new Date(),
-        now_day = now.getDate() + 5;
+            now_day = now.setDate(now.getDate() + 5),
+            now_day_input = now.getDate();
+
 
         const monthNames = [
             "января", "февраля", "марта", "апреля", "мая", "июня",
@@ -136,7 +138,7 @@
 
         var day_result = monthNames[now.getMonth()];
 
-        $('.load-date').text(now_day +' '+ day_result);
+        $('.load-date').text(now_day_input +' '+ day_result);
 
     });
 })(jQuery);
